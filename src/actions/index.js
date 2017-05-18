@@ -83,5 +83,8 @@ export {
   toggleOperationListVisibility,
   addItemsList,
   addOperationsToItem,
-  addData
+  addData,
+  ADD_MESSAGE,
+  ADD_MESSAGE_LIST,
+  EDIT_MESSAGE
 }
