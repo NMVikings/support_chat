@@ -1,10 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editMessage } from '../actions';
+import { editMessage } from '../../actions/index';
+import './MessageInput.css';
 
 const MessageInput = ({ value, editMessage }) => {
   return (
-    <input type="text" value={value} onChange={editMessage} />
+    <textarea className="message-input"
+              type="text" value={value}
+              onChange={editMessage}
+              placeholder='Сообщение'
+              rows='6'
+    />
   )
 };
 const mapStateToProps = ({ input }) => {

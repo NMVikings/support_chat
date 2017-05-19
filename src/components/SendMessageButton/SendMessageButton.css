@@ -1,0 +1,9 @@
+.button {
+    border: none;
+    width: 90px;
+    border-radius: 4px;
+    background-color: #52AFF1;
+    height: 33px;
+    color: #FFFFFF;
+    align-self: flex-end;
+}

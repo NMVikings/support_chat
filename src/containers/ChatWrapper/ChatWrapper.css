@@ -1,0 +1,15 @@
+.chat-wrapper {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 30px;
+    align-items: stretch;
+    flex: 1;
+    box-shadow: inset 0 1px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+.chat-content {
+    display: flex;
+    min-height: min-content;
+    flex-direction: column;
+}

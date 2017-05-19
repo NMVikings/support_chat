@@ -1,0 +1,8 @@
+.chat-window {
+    width: 894px;
+    background-color: #F4F4F4;
+    border-right: solid 2px #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

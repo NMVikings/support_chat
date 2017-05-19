@@ -1,0 +1,5 @@
+.message-list {
+    display: inherit;
+    flex-direction: inherit;
+    justify-content: space-between;
+}

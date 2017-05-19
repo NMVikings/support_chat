@@ -40,7 +40,7 @@ const messageReducer = (state = {}, action) => {
       const dateId = action.date.toLocaleDateString();
       const message = {role, date, image, name, content};
       if (state[dateId] === undefined) {
-        return {...state, [dateId]: {message}}
+        return {[dateId]: [message], ...state}
       } else {
         return {...state, [dateId]: [message, ...state[dateId]]}
       }

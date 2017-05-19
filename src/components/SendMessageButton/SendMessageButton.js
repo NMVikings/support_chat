@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
-import { addMessage } from '../actions/index';
+import { addMessage } from '../../actions/index';
 import React from 'react';
+import './SendMessageButton.css';
 
 
 const Button = ({ isDisabled = false, message, sendMessage, children = ''}) => {
@@ -8,6 +9,7 @@ const Button = ({ isDisabled = false, message, sendMessage, children = ''}) => {
     <button
       onClick={() => sendMessage({...message, date: new Date()})}
       disabled={isDisabled}
+      className="button"
     >
       {children}
     </button>

@@ -1,0 +1,15 @@
+.date-block {
+    display: inherit;
+    flex-direction: inherit;
+    align-self: stretch;
+    padding: 0 57px;
+}
+
+.date {
+    align-self: center;
+    padding: 10px 0;
+    color: #B7B7B7;
+    font-family: SFUIDisplay, Roboto, sans-serif;
+    font-size: 16px;
+    margin-bottom: 20px;
+}

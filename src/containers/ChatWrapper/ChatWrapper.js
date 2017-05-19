@@ -1,11 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import DateBlock from '../components/DateBlock';
+import DateBlock from '../../components/DateBlock/DateBlock';
+import './ChatWrapper.css';
 
 const ChatWrapper = ({ messages, keys }) => {
   return (
-    <div>
-      {keys.map(key => <DateBlock key={key} date={key} messageList={messages[key]} />)  }
+    <div className="chat-wrapper">
+      <div className="chat-content">
+        {keys.map(key => <DateBlock key={key} date={key} messageList={messages[key]} />)  }
+      </div>
     </div>
   )
 };

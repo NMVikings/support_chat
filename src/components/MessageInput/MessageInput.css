@@ -1,0 +1,13 @@
+.message-input {
+    resize: none;
+    font-size: 14px;
+    padding: 11px 17px;
+    border: 1px solid #DEDEDE;
+    border-radius: 4px;
+    margin-bottom: 11px;
+    align-self: stretch;
+}
+
+.message-input::placeholder {
+    color: #DEDEDE;
+}

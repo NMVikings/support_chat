@@ -1,7 +1,7 @@
 const defaultAdmin = {
   role: 'Admin',
   name: 'Мария',
-  image: '#'
+  image: 'https://graph.facebook.com/100006276431900/picture?type=normal'
 };
 
 const adminReducer = (state = defaultAdmin, action) => {

@@ -1,0 +1,16 @@
+.message-input-wrapper {
+    padding: 50px 100px 57px 100px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-basis: 330px;
+}
+
+.message-input-wrapper__header {
+    margin: 10px 0;
+    color: #333333;
+    font-size: 30px;
+    font-weight: 500;
+    align-self: flex-start;
+}
