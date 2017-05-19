@@ -1,4 +1,4 @@
-import { ADD_MESSAGE, EDIT_MESSAGE, ADD_MESSAGE_LIST } from '../actions';
+import { ADD_MESSAGE, ADD_MESSAGE_LIST } from '../actions';
 
 const processMessagesList = (data) => {
   const processDate = (newData, item) => {
@@ -23,15 +23,28 @@ const processMessagesList = (data) => {
     return 0;
   };
 
-  return data.sort(sortByDate).reduce(processDate, {});
+  const standardizeDate = (item) => {
+    return {
+      ...item,
+      date: new Date(item.date)
+    }
+  };
+
+  return data.map(standardizeDate).sort(sortByDate).reduce(processDate, {});
 };
 
 const messageReducer = (state = {}, action) => {
   switch (action.type) {
-    case ADD_MESSAGE:
-      return state;
-    case EDIT_MESSAGE:
-      return state;
+    case ADD_MESSAGE: {
+      const {role, date, image, name, content} = action;
+      const dateId = action.date.toLocaleDateString();
+      const message = {role, date, image, name, content};
+      if (state[dateId] === undefined) {
+        return {...state, [dateId]: {message}}
+      } else {
+        return {...state, [dateId]: [message, ...state[dateId]]}
+      }
+    }
     case ADD_MESSAGE_LIST:
       return processMessagesList([...state, ...action.messageList]);
     default:

@@ -7,14 +7,13 @@ const ADD_ITEMS_LIST = 'ADD_ITEMS_LIST';
 const ADD_OPERATIONS_TO_ITEM = 'ADD_OPERATIONS_TO_ITEM';
 const ADD_DATA = 'ADD_DATA';
 
-const addMessage = (role, name, content, date, time, image) => {
+const addMessage = ({ role, name, content, date, image }) => {
   return {
     type: ADD_MESSAGE,
     role,
     name,
     content,
     date,
-    time,
     image
   }
 };

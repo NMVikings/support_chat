@@ -1,11 +1,20 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import DateBlock from '../components/DateBlock';
 
-const ChatWrapper = () => {
+const ChatWrapper = ({ messages, keys }) => {
   return (
     <div>
-      ChatWrapper
+      {keys.map(key => <DateBlock key={key} date={key} messageList={messages[key]} />)  }
     </div>
   )
 };
 
-export default ChatWrapper;
+const mapStateToProps = ({ messages }) => {
+  return {
+    messages,
+    keys: Object.keys(messages)
+  }
+};
+
+export default connect(mapStateToProps)(ChatWrapper);

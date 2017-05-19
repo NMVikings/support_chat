@@ -1,11 +1,10 @@
 import { combineReducers } from 'redux';
 import messages from './messages';
-
-const def = (state = {}, action) => {
-  return state;
-};
+import input from './input';
+import admin from './admin';
 
 export default combineReducers({
   messages,
-  def
+  input,
+  admin
 });

@@ -1,14 +1,25 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { editMessage } from '../actions';
 
-class MessageInput extends React.Component  {
-  render() {
-    return (
-      <input type="text" />
-    )
+const MessageInput = ({ value, editMessage }) => {
+  return (
+    <input type="text" value={value} onChange={editMessage} />
+  )
+};
+const mapStateToProps = ({ input }) => {
+  return {
+    value: input
   }
-}
+};
 
-export default connect()(MessageInput);
+const mapDispatchToProps = ( dispatch ) => {
+  return {
+    editMessage: (e) => {
+      dispatch(editMessage(e.target.value))
+    }
+  }
+};
+export default connect(mapStateToProps, mapDispatchToProps)(MessageInput);
 
 
