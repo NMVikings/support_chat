@@ -12,7 +12,10 @@ const MessageItem = ({ data }) => {
         <img src={image} alt="avatar"/>
       </div>
       <div className="chat__message-content">
-        <span className="chat__message-author">{name}:</span> {content}
+        <span className="chat__message-author">{name}: </span>
+        {content.split('\n').filter(e => !!e).map((item, key) => {
+          return <span key={key}>{item}<br/></span>
+        })}
       </div>
     </div>
   )
