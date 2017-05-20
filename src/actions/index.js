@@ -85,5 +85,6 @@ export {
   addData,
   ADD_MESSAGE,
   ADD_MESSAGE_LIST,
-  EDIT_MESSAGE
+  EDIT_MESSAGE,
+  CHANGE_TAB
 }

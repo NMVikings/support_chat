@@ -7,13 +7,18 @@
     color: #FFFFFF;
 }
 
-.btn:disabled {
-
+.btn:not(:disabled) {
+    cursor: pointer;
 }
 
 .btn_big {
-    width: 171px;
-    height: 47px;
+    width: 170px;
+    height: 45px;
+    font-size: 20px;
+}
+
+.btn_big:active, .btn_big:focus {
+    outline: none;
 }
 
 .btn_invert-colors {
