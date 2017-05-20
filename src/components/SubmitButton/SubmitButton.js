@@ -5,9 +5,9 @@ import './SubmitButton.css';
 import Button from '../Button/Button';
 
 
-const SendMessageButton = ({ isDisabled = false, message, sendMessage, children = ''}) => {
+const SendMessageButton = ({ isDisabled = false, sendMessage, children = ''}) => {
   return (
-    <Button onClick={() => sendMessage({...message, date: new Date()})}
+    <Button onClick={sendMessage}
             isDisabled={isDisabled}
             classString="message-form__btn"
             >
@@ -26,11 +26,14 @@ const mapStateToProps = ({ input, admin }) => {
   }
 };
 
-const mapDispatchToProps = ( dispatch ) => {
+const mergeProps = ({ message, isDisabled }, { dispatch }, ownProps) => {
   return {
-    sendMessage: (message) => {
-      dispatch(addMessage(message))
+    ...ownProps,
+    isDisabled,
+    sendMessage: (e) => {
+      e.preventDefault();
+      dispatch(addMessage({...message, date: new Date()}));
     }
   }
 };
-export default connect(mapStateToProps, mapDispatchToProps)(SendMessageButton);
+export default connect(mapStateToProps, null, mergeProps)(SendMessageButton);

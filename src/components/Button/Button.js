@@ -7,7 +7,7 @@ const Button = ({ isDisabled = false, onClick = toop, children = [], classString
     <button
       onClick={onClick}
       disabled={isDisabled}
-      className= {`btn ${classString}`}
+      className={`btn ${classString}`}
     >
       {children}
     </button>
