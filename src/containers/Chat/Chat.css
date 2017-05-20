@@ -1,0 +1,29 @@
+.chat {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 30px;
+    align-items: stretch;
+    flex: 1;
+    box-shadow: inset 0 1px 10px 0 rgba(0, 0, 0, 0.05);
+}
+
+
+.thumb-vertical {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    border-radius: inherit;
+    background-color: #52AFF1;
+}
+
+.track-vertical {
+    position: absolute;
+    width: 9px!important;
+    display: block;
+    background: #E4E4E4;
+    right: 2px;
+    bottom: 0;
+    top: 58px;
+    border-radius: 100px;
+}

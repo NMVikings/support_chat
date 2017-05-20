@@ -1,12 +1,13 @@
-.date-block {
+.chat__date-block {
     display: inherit;
     flex-direction: inherit;
     align-self: stretch;
-    padding: 0 57px;
+    padding: 0 70px;
 }
 
-.date {
+.chat__date-title {
     align-self: center;
+    text-align: center;
     padding: 10px 0;
     color: #B7B7B7;
     font-family: SFUIDisplay, Roboto, sans-serif;

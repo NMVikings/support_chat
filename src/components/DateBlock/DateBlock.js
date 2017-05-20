@@ -3,10 +3,9 @@ import MessageListForDate from '../MessageListForDate/MessagesListForDate';
 import './DateBlock.css';
 
 const DateBlock = ({ date, messageList }) => {
-  console.log(messageList);
   return (
-    <div className="date-block">
-      <div className="date">&#8212; {date} &#8212;</div>
+    <div className="chat__date-block">
+      <div className="chat__date-title">&#8212; {date} &#8212;</div>
       <MessageListForDate messageList={messageList}/>
     </div>
   )

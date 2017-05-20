@@ -1,8 +1,8 @@
 .app {
     max-width : 1440px;
-    outline: 1px solid red;
     margin: auto;
     height: 1024px;
     display: flex;
     flex-direction: row;
+    background: #FFFFFF;
 }

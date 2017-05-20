@@ -4,7 +4,7 @@ import './MessageListForDate.css';
 
 const MessagesListForDate = ({ messageList }) => {
   return (
-    <div className="message-list">
+    <div className="chat__message-list">
       {messageList.map((item, index) => <MessageItem key={index} data={item}/>)}
     </div>
   )

@@ -1,4 +1,4 @@
-.message-input-wrapper {
+.message-form {
     padding: 50px 100px 57px 100px;
     border-radius: 4px;
     display: flex;
@@ -7,7 +7,7 @@
     flex-basis: 330px;
 }
 
-.message-input-wrapper__header {
+.message-form__title {
     margin: 10px 0;
     color: #333333;
     font-size: 30px;

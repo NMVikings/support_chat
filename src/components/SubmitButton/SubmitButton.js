@@ -1,18 +1,18 @@
 import { connect } from 'react-redux';
 import { addMessage } from '../../actions/index';
 import React from 'react';
-import './SendMessageButton.css';
+import './SubmitButton.css';
+import Button from '../Button/Button';
 
 
-const Button = ({ isDisabled = false, message, sendMessage, children = ''}) => {
+const SendMessageButton = ({ isDisabled = false, message, sendMessage, children = ''}) => {
   return (
-    <button
-      onClick={() => sendMessage({...message, date: new Date()})}
-      disabled={isDisabled}
-      className="button"
-    >
+    <Button onClick={() => sendMessage({...message, date: new Date()})}
+            isDisabled={isDisabled}
+            classString="message-form__btn"
+            >
       {children}
-    </button>
+    </Button>
   );
 };
 
@@ -33,4 +33,4 @@ const mapDispatchToProps = ( dispatch ) => {
     }
   }
 };
-export default connect(mapStateToProps, mapDispatchToProps)(Button);
+export default connect(mapStateToProps, mapDispatchToProps)(SendMessageButton);

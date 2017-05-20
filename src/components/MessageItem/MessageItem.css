@@ -1,4 +1,4 @@
-.message-item {
+.chat__message {
     display: flex;
     flex-direction: row;
     margin-bottom: 30px;
@@ -7,35 +7,38 @@
     color: #878787;
 }
 
-.message-item_reverse {
+.chat__message_reverse {
     align-self: flex-end;
     flex-direction: row-reverse;
     text-align: right;
 }
 
-.message-content {
+.chat__message-content {
     max-width: 581px;
-    padding: 14px 28px 18px 13px;
+    padding: 14px 13px 18px;
     background: #FFFFFF;
     border-radius: 5px;
     margin: 0 13px;
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
 }
 
-.message-avatar {
+.chat__avatar {
     border: 2px solid #ffffff;
     border-radius: 50%;
     width: 41px;
     height: 41px;
     margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.message-avatar img{
+.chat__avatar img{
     border-radius: 50%;
-    width: 41px;
-    height: 41px;
+    width: 39px;
+    height: 39px;
 }
 
-.message-author {
+.chat__message-author {
     color: #333333;
 }

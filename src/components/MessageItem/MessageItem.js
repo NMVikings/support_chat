@@ -4,15 +4,15 @@ import './MessageItem.css';
 const MessageItem = ({ data }) => {
   const {name, content, role, image} = data;
   const classString = (role === 'Admin') ?
-    'message-item message-item_reverse' :
-    'message-item';
+    'chat__message chat__message_reverse' :
+    'chat__message';
   return (
     <div className={classString}>
-      <div className="message-avatar">
+      <div className="chat__avatar">
         <img src={image} alt="avatar"/>
       </div>
-      <div className="message-content">
-        <span className="message-author">{name}:</span> {content}
+      <div className="chat__message-content">
+        <span className="chat__message-author">{name}:</span> {content}
       </div>
     </div>
   )

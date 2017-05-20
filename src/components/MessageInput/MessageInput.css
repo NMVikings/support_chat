@@ -1,4 +1,4 @@
-.message-input {
+.message-form__input {
     resize: none;
     font-size: 14px;
     padding: 11px 17px;
@@ -8,6 +8,6 @@
     align-self: stretch;
 }
 
-.message-input::placeholder {
+.message-form__input::placeholder {
     color: #DEDEDE;
 }

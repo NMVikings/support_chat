@@ -5,7 +5,7 @@ import './MessageInput.css';
 
 const MessageInput = ({ value, editMessage }) => {
   return (
-    <textarea className="message-input"
+    <textarea className="message-form__input"
               type="text" value={value}
               onChange={editMessage}
               placeholder='Сообщение'
