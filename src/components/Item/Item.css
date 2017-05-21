@@ -1,0 +1,50 @@
+.item {
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    padding: 30px 40px;
+}
+
+.item_even {
+    background-color: #FFFFFF;
+}
+
+.item_odd {
+    background-color: #F9F9F9;
+    border-color: #EEEEEE;
+}
+
+
+.item__header {
+    color: #333333;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.item__title {
+    position: relative;
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 13px;
+}
+
+.item__money {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.item__dropdown-icon {
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    position: absolute;
+    right: 0;
+    background: yellow;
+    background-clip: content-box;
+}
+
+
+.item__footer {
+    font-size: 14px;
+    line-height: 1.43;
+    color: #999999;
+}
