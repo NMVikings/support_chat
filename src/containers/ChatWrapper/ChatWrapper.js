@@ -1,5 +1,5 @@
 import React from 'react';
-import MessageForm from '../../components/MessageForm/MessageForm';
+import MessageForm from '../MessageForm/MessageForm';
 import Chat from '../Chat/Chat';
 import './ChatWrapper.css';
 
