@@ -34,21 +34,13 @@ const processMessagesList = (data) => {
 };
 
 const createMessage = (action) => {
-  const {type, content, ...message} = action;
+  const {type, ...message} = action;
 
-  return {content: content.trim(), ...message};
+  return {...message};
 };
 
 const addMessageToState = (state, message) => {
-  const isEmpty = ({ content }) => {
-    return content.length === 0;
-  };
-
   const dateId = message.date.toLocaleDateString();
-
-  if (isEmpty(message)) {
-    return state;
-  }
   if (state[dateId] === undefined) {
     return {[dateId]: [message], ...state}
   } else {

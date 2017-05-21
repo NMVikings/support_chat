@@ -15,14 +15,19 @@ class MessageForm extends Component {
     const sendMessageByButton = this.props.sendMessageByButton.bind(this);
     const sendMessageByKeyDown = this.props.sendMessageByKeyDown.bind(this);
     const { value } = this.state;
+
     return (
       <form className="message-form">
         <h1 className="message-form__title">Чат</h1>
         <MessageInput
           sendMessage={sendMessageByKeyDown}
           editMessage={this.editMessage}
-          value={value}/>
-        <SubmitButton isDisabled={value.length === 0} sendMessage={sendMessageByButton}>
+          value={value}
+        />
+        <SubmitButton
+          isDisabled={value.length === 0}
+          sendMessage={sendMessageByButton}
+        >
           Отправить
         </SubmitButton>
       </form>
@@ -41,7 +46,10 @@ const mapStateToProps = ({ admin }) => ({ admin });
 const mergeProps = ({ admin }, { dispatch } ) => {
   function sendMessage(e) {
     e.preventDefault();
-    dispatch(addMessage({...admin, content: this.state.value, date: new Date()}));
+    const value = this.state.value.trim();
+    if (value.length !== 0) {
+      dispatch(addMessage({...admin, content: value, date: new Date()}));
+    }
     this.setState({
       value: ''
     });
