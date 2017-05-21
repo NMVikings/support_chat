@@ -2,9 +2,7 @@ import React from 'react';
 import './TabSelector.css';
 import Button from '../Button/Button';
 
-const TabSelector = ({ setAccountTab, setDepositTab, isAccountTabActive }) => {
-
-  return (
+const TabSelector = ({ setAccountTab, setDepositTab, isAccountTabActive }) => (
     <div className="tab-selector">
       <Button
         classString={`btn_big ${isAccountTabActive ? '' : 'btn_invert-colors'}`}
@@ -21,7 +19,6 @@ const TabSelector = ({ setAccountTab, setDepositTab, isAccountTabActive }) => {
         Вклады
       </Button>
     </div>
-  )
-};
+);
 
 export default TabSelector;

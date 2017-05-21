@@ -5,31 +5,24 @@ import TabSelector from '../../components/TabSelector/TabSelector';
 import ItemsList from '../ItemsList/ItemsList';
 import './Sidebar.css'
 
-const Sidebar = (props) => {
-  const { isAccountTabActive } = props;
-  return (
+const Sidebar = (props) => (
     <div className="sidebar">
       <TabSelector {...props}/>
-      <ItemsList isAccountTabActive={isAccountTabActive} />
+      <ItemsList isAccountTabActive={props.isAccountTabActive} />
     </div>
-  )
-};
+);
 
-const mapStateToProps = ({ tab }) => {
-  return {
+const mapStateToProps = ({ tab }) => ({
     isAccountTabActive: tab === 'account'
-  };
-};
+});
 
-const mapDispatchToProps = ( dispatch ) => {
-  return {
-    setAccountTab: () => {
+const mapDispatchToProps = ( dispatch ) => ({
+    setAccountTab() {
       dispatch(changeTab('account'))
     },
-    setDepositTab: () => {
+    setDepositTab() {
       dispatch(changeTab('deposit'))
     }
-  }
-};
+});
 
 export default connect(mapStateToProps, mapDispatchToProps)(Sidebar);

@@ -1,4 +1,5 @@
 import { ADD_MESSAGE, EDIT_MESSAGE } from '../actions';
+
 const inputReducer = (state = '', action) => {
   switch (action.type) {
     case ADD_MESSAGE:

@@ -2,8 +2,7 @@ import React from 'react';
 import './Button.css';
 
 const toop = () => {};
-const Button = ({ isDisabled = false, onClick = toop, children = [], classString=''}) => {
-  return (
+const Button = ({ isDisabled = false, onClick = toop, children = [], classString=''}) => (
     <button
       onClick={onClick}
       disabled={isDisabled}
@@ -11,7 +10,6 @@ const Button = ({ isDisabled = false, onClick = toop, children = [], classString
     >
       {children}
     </button>
-  );
-};
+);
 
 export default Button;

@@ -33,30 +33,33 @@ const processMessagesList = (data) => {
   return data.map(standardizeDate).sort(sortByDate).reduce(processDate, {});
 };
 
-const isEmpty = ({ content }) => {
-  return content.length === 0;
-};
-
 const createMessage = (action) => {
   const {type, content, ...message} = action;
 
   return {content: content.trim(), ...message};
 };
 
+const addMessageToState = (state, message) => {
+  const isEmpty = ({ content }) => {
+    return content.length === 0;
+  };
+
+  const dateId = message.date.toLocaleDateString();
+
+  if (isEmpty(message)) {
+    return state;
+  }
+  if (state[dateId] === undefined) {
+    return {[dateId]: [message], ...state}
+  } else {
+    return {...state, [dateId]: [message, ...state[dateId]]}
+  }
+};
+
 const messageReducer = (state = {}, action) => {
   switch (action.type) {
     case ADD_MESSAGE: {
-      const message = createMessage(action);
-      const dateId = message.date.toLocaleDateString();
-
-      if (isEmpty(message)) {
-        return state;
-      }
-      if (state[dateId] === undefined) {
-        return {[dateId]: [message], ...state}
-      } else {
-        return {...state, [dateId]: [message, ...state[dateId]]}
-      }
+      return addMessageToState(state, createMessage(action));
     }
     case ADD_MESSAGE_LIST:
       return processMessagesList([...state, ...action.messageList]);

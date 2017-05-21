@@ -1,11 +1,9 @@
 import React from 'react';
 
-const ItemsList = ({ isAccountTabActive }) => {
-  return (
+const ItemsList = ({ isAccountTabActive }) => (
     <div>
       {isAccountTabActive ? 'account' : 'deposit'}
     </div>
-  )
-};
+);
 
 export default ItemsList;

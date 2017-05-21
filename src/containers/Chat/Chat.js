@@ -4,7 +4,7 @@ import DateBlock from '../../components/DateBlock/DateBlock';
 import './Chat.css';
 import { Scrollbars } from 'react-custom-scrollbars';
 
-const ChatWrapper = ({ messages, keys }) => {
+const ChatWrapper = ({ messages, keys }) => (
   // const isOverflown = () => {
   //   if (document.getElementsByClassName('chat__date-block').length !== 0) {
   //     const chat_blocks = [].slice.call(document.getElementsByClassName('chat__date-block'));
@@ -21,7 +21,6 @@ const ChatWrapper = ({ messages, keys }) => {
   //
   // or add autoHide
 
-  return (
     <div className="chat">
       <Scrollbars
         autoHide
@@ -32,14 +31,11 @@ const ChatWrapper = ({ messages, keys }) => {
         {keys.map(key => <DateBlock key={key} date={key} messageList={messages[key]} />)  }
       </Scrollbars>
     </div>
-  )
-};
+);
 
-const mapStateToProps = ({ messages }) => {
-  return {
+const mapStateToProps = ({ messages }) => ({
     messages,
     keys: Object.keys(messages)
-  }
-};
+});
 
 export default connect(mapStateToProps)(ChatWrapper);
