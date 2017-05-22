@@ -41,7 +41,7 @@ const mergeProps = ( { content }, dispatchProps, { data } ) => {
   return {...data, content: (
     <div className="chat__message-content">
       <span className="chat__message-author">{data.name}: </span>
-      {data.content.split('\n').filter(e => !!e).map((item, key) => {
+      {data.content.split('\n').filter(e => !!e.trim()).map((item, key) => {
         return <span key={key}>{item}<br/></span>
       })}
 
