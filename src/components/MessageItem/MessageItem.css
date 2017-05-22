@@ -21,6 +21,11 @@
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.05);
 }
 
+.chat__message-content_with-operation {
+    padding: 15px 20px 20px;
+    border: solid 1px #52aff1;
+}
+
 .chat__avatar {
     border: 2px solid #ffffff;
     border-radius: 50%;
@@ -40,4 +45,11 @@
 
 .chat__message-author {
     color: #333333;
+}
+
+.chat__operation-title {
+    font-size: 16px;
+    line-height: 1.25;
+    color: #262626;
+    margin-bottom: 8px;
 }

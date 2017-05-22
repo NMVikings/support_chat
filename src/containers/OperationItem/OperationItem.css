@@ -1,0 +1,27 @@
+.operation__item {
+    position: relative;
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    padding: 12px 40px;
+}
+
+
+.operation__item_even {
+    background-color: #FFFFFF;
+}
+
+.operation__item_odd {
+    background-color: #F9F9F9;
+    border-color: #EEEEEE;
+}
+
+.operation__message-icon {
+    position: absolute;
+    right: 40px;
+    top: calc(50% - 8px);
+    width: 20px;
+    height: 20px;
+    padding: 2px;
+    background-color: green;
+    background-clip: content-box;
+}

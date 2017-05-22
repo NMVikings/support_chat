@@ -26,7 +26,7 @@ const getPropsForItem = (state, id) => {
 
 const getActiveId = (state) => {
   const activeTab = state[state.tab];
-  return getKeys(state).filter(key => activeTab[key].is_open)
+  return getKeys(state).filter(key => activeTab[key].is_open)[0] || ''
 };
 
 const getItemOperations = (state, id) => {
@@ -35,9 +35,15 @@ const getItemOperations = (state, id) => {
   }
 };
 
+const getOperation = (state, { tab, itemId, operationId }) => {
+  const operations = state[tab][itemId].operations;
+  return operations.filter(e => e.id === operationId)[0];
+};
+
 export {
   getKeys,
   getPropsForItem,
   getActiveId,
-  getItemOperations
+  getItemOperations,
+  getOperation
 }

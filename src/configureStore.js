@@ -113,7 +113,6 @@ const configureStore = () => {
         currency: 'EUR',
         amount: 10000,
         is_open: false,
-        replenishable: false,
         insured: true,
       },
       '3452365738': {
@@ -124,29 +123,7 @@ const configureStore = () => {
         period: 12,
         currency: 'EUR',
         amount: 88000,
-        replenishable: true,
-        insured: true,
-        operations: [
-          {
-            date: new Date(2017, 4, 19),
-            text: "Пополнение с карты **** 0465",
-            change: 3500,
-            id: v4()
-          },
-          {
-            date: new Date(2017, 4, 17),
-            text: "Пополнение с карты **** 0465",
-            change: 6000,
-            id: v4()
-          },
-          {
-            date: new Date(2017, 4, 18),
-            text: "Начисление процентов",
-            change: 7500,
-            moneyDirection: true,
-            id: v4()
-          },
-        ]
+        insured: true
       },
       '2536326357': {
         name: 'На машину',
@@ -156,32 +133,10 @@ const configureStore = () => {
         period: 3,
         currency: 'EUR',
         amount: 25000,
-        replenishable: false,
-        insured: true,
-        operations: [
-          {
-            date: new Date(2017, 4, 19),
-            text: "Пополнение с карты **** 0465",
-            change: 3500,
-            id: v4()
-          },
-          {
-            date: new Date(2017, 4, 17),
-            text: "Пополнение с карты **** 0465",
-            change: 6000,
-            id: v4()
-          },
-          {
-            date: new Date(2017, 4, 18),
-            text: "Начисление процентов",
-            change: 1000,
-            moneyDirection: true,
-            id: v4()
-          },
-        ]
+        insured: true
       }
     }
-  }
+  };
 
   const addLoggingToDispatch = (store) => {
     const rawDispatch = store.dispatch;

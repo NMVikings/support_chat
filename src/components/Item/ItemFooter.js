@@ -3,10 +3,16 @@ import { connect } from 'react-redux';
 import { getPropsForItem } from '../../reducers';
 
 const ItemFooter = ({ percentage, date, lastOperation, is_open }) => {
-  const lastOperationSpan = (lastOperation !== null && !is_open) ?
-    (<span><br/>
-      Последняя операция: {lastOperation.date.toLocaleDateString()} | {lastOperation.date.toLocaleTimeString()} ({lastOperation.change})
-    </span>) : <span></span>
+  let lastOperationSpan = <span></span>;
+  if (lastOperation !== null && !is_open) {
+    const classString =`change ${lastOperation.moneyDirection ? 'change_positive' : 'change_negative'}`;
+    lastOperationSpan =
+      (<span><br/>
+      Последняя операция: {lastOperation.date.toLocaleDateString()} | {lastOperation.date.toLocaleTimeString()}
+        (<span className={classString}>{lastOperation.moneyDirection ? '+' : '-'} {lastOperation.change}</span>)
+    </span>);
+  }
+
   return (
     <footer className="item__footer">
       {percentage}% годовых<br/>

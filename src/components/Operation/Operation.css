@@ -1,0 +1,17 @@
+.operation {
+    font-size: 14px;
+    line-height: 20px;
+    color: #262626;
+}
+
+.operation__date {
+    color: #999999;
+}
+
+.change_positive {
+    color: #6ECE1A;
+}
+
+.change_negative {
+    color: #DE1c28;
+}
