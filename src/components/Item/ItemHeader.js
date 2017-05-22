@@ -5,16 +5,20 @@ import { getPropsForItem } from '../../reducers';
 import maximize from '../../images/maximize.svg';
 import close from '../../images/close.svg';
 
-const ItemHeader = ({ id, name, amount, currency, is_open, toggleVisibility }) => {
+const ItemHeader = ({ tab, id, name, amount, currency, is_open, toggleVisibility }) => {
   const title = (name === undefined) ? `Счет № ${id}` : name;
   return (
     <header className="item__header">
       <div className="item__title">
         {title}
-        <img src={is_open ? close : maximize}
-             className="item__dropdown-icon"
-             onClick={toggleVisibility}
-        />
+        {
+          tab === 'accounts' ?
+            <img src={is_open ? close : maximize}
+                 className="item__dropdown-icon"
+                 onClick={toggleVisibility}
+            /> :
+            ''
+        }
       </div>
       <div className="item__money">{amount} {currency}</div>
     </header>
@@ -36,6 +40,7 @@ const mergeProps = ({ tab, ...data }, { dispatch }, { id }) => {
   return {
     ...data,
     id,
+    tab,
     toggleVisibility() {
       dispatch(toggleOperationListVisibility(tab, id))
     }
