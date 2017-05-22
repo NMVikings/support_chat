@@ -47,6 +47,7 @@ const mergeProps = ({ admin }, { dispatch } ) => {
   function sendMessage(e) {
     e.preventDefault();
     const value = this.state.value.trim();
+    console.log(value);
     if (value.length !== 0) {
       dispatch(addMessage({...admin, content: value, date: new Date()}));
     }

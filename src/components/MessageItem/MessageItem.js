@@ -4,7 +4,7 @@ import './MessageItem.css';
 import { getOperation } from '../../reducers/sidebar';
 import { connect } from 'react-redux';
 
-const MessageItem = ({  content, role, image }) => {
+const MessageItem = ({  content, role }) => {
   const classString = (role === 'Admin') ?
     'chat__message chat__message_reverse' :
     'chat__message';
@@ -41,7 +41,10 @@ const mergeProps = ( { content }, dispatchProps, { data } ) => {
   return {...data, content: (
     <div className="chat__message-content">
       <span className="chat__message-author">{data.name}: </span>
-      {data.content}
+      {data.content.split('\n').filter(e => !!e).map((item, key) => {
+        return <span key={key}>{item}<br/></span>
+      })}
+
     </div>
   )};
 };
