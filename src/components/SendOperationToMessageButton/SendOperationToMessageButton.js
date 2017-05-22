@@ -1,10 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addMessage } from '../../actions';
+import  send from '../../images/mingle-share.svg';
 
 const SendOperationToMessageButton = ({ sendOperation }) => {
   return (
-    <span className="operation__message-icon" onClick={sendOperation} />
+    <img src={send} className="operation__message-icon" onClick={sendOperation} />
   )
 };
 

@@ -16,7 +16,7 @@ const configureStore = () => {
       '57890456': {
         percentage: 8,
         date: new Date(2017, 4, 8),
-        currency: 'EUR',
+        currency: 'RUB',
         amount: 45897,
         is_open: false,
         operations: [
@@ -77,7 +77,7 @@ const configureStore = () => {
         name: 'На HolyJS',
         percentage: 8,
         date: new Date(2017, 4, 8),
-        currency: 'EUR',
+        currency: 'USD',
         amount: 7898,
         is_open: false,
         operations: [
@@ -121,7 +121,7 @@ const configureStore = () => {
         percentage: 8,
         date: new Date(2017, 4, 8),
         period: 12,
-        currency: 'EUR',
+        currency: 'USD',
         amount: 88000,
         insured: true
       },
@@ -131,7 +131,7 @@ const configureStore = () => {
         percentage: 8,
         date: new Date(2017, 4, 8),
         period: 3,
-        currency: 'EUR',
+        currency: 'RUB',
         amount: 25000,
         insured: true
       }

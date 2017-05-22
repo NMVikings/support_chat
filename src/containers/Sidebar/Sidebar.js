@@ -14,7 +14,7 @@ const Sidebar = ({ keys, activeId, ...props}) => {
       {
         (activeId.length === 0) ?
           <ItemsList keys={keys} /> :
-          <OperationsList id={activeId}/>
+          <OperationsList id={activeId} />
       }
     </div>
   );

@@ -4,17 +4,7 @@ import './MessageItem.css';
 import { getOperation } from '../../reducers';
 import { connect } from 'react-redux';
 
-const MessageItem = ({ name, content, role, image} ) => {
-  // let messageContent = content;
-  // if (typeof(content) === 'string') {
-  //   messageContent = content.split('\n')
-  //     .filter(e => !!e)
-  //     .map((item, key) =>
-  //       (<span key={key}>{item}<br/></span>)
-  //     );
-  // } else if (content instanceof Object) {
-  //
-  // }
+const MessageItem = ({  content, role, image }) => {
   const classString = (role === 'Admin') ?
     'chat__message chat__message_reverse' :
     'chat__message';
@@ -22,7 +12,7 @@ const MessageItem = ({ name, content, role, image} ) => {
   return (
     <div className={classString}>
       <div className="chat__avatar">
-        <img src={image} alt="avatar"/>
+        <img src={require(`../../images/${role}.jpg`)} alt="avatar"/>
       </div>
       {content}
     </div>

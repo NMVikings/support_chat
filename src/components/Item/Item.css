@@ -33,13 +33,9 @@
 }
 
 .item__dropdown-icon {
-    width: 20px;
-    height: 20px;
-    padding: 2px;
     position: absolute;
     right: 0;
-    background: yellow;
-    background-clip: content-box;
+    cursor: pointer;
 }
 
 

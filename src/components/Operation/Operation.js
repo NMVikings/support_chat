@@ -1,5 +1,5 @@
 import React from 'react';
-import './Operation.css'
+import './Operation.css';
 
 const Operation = ({ date, text, change, moneyDirection }) => {
   const classString =`change ${moneyDirection ? 'change_positive' : 'change_negative'}`;
@@ -7,7 +7,7 @@ const Operation = ({ date, text, change, moneyDirection }) => {
     <div className="operation">
       <span className="operation__date">{date.toLocaleDateString()} | {date.toLocaleTimeString()}</span>
       <br/>
-      {text}&nbsp;&nbsp;<span className={classString}>{moneyDirection ? '+' : '-'} {change}</span>
+      {text}  <span className={classString}>{moneyDirection ? '+' : '-'} {change} </span>
     </div>
   )
 };
