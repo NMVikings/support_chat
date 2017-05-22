@@ -15,10 +15,9 @@ const changeTab = (tab) => ({
     tab
 });
 
-const toggleOperationListVisibility = (typeOfList, id) => ({
-    type: TOGGLE_OPERATIONS_LIST_VISIBILITY,
-    typeOfList,
-    id
+const toggleOperationListVisibility = (id) => ({
+  type: TOGGLE_OPERATIONS_LIST_VISIBILITY,
+  id
 });
 
 const addItemsList = (typeOfList, list) => ({

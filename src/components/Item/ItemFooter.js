@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { getPropsForItem } from '../../reducers';
 
 const ItemFooter = ({ percentage, date, lastOperation, is_open }) => {
   let lastOperationSpan = <span></span>;
@@ -18,26 +16,9 @@ const ItemFooter = ({ percentage, date, lastOperation, is_open }) => {
       {percentage}% годовых<br/>
       Создан: {date.toLocaleDateString()} | {date.toLocaleTimeString()}
       {lastOperationSpan}
-      </footer>
+    </footer>
   );
 };
 
-const mapStateToProps = (state, { id }) => {
-  const { percentage, operations, date, is_open } = getPropsForItem(state, id);
-  if (operations !== undefined && operations.length !== 0) {
-    return {
-      is_open,
-      percentage,
-      date,
-      lastOperation: operations[0]
-    }
-  }
-  return {
-    percentage,
-    date,
-    lastOperation: null
-  };
-};
 
-
-export default connect(mapStateToProps)(ItemFooter);
+export default ItemFooter;

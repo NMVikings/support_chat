@@ -32,14 +32,8 @@ const processMessagesList = (data) => {
 
   return data.map(standardizeDate).sort(sortByDate).reduce(processDate, {});
 };
-
-const createMessage = (action) => {
+const addMessageToState = (state, action) => {
   const {type, ...message} = action;
-
-  return {...message};
-};
-
-const addMessageToState = (state, message) => {
   const dateId = message.date.toLocaleDateString();
   if (state[dateId] === undefined) {
     return {[dateId]: [message], ...state}
@@ -48,13 +42,14 @@ const addMessageToState = (state, message) => {
   }
 };
 
+
 const messageReducer = (state = {}, action) => {
   switch (action.type) {
     case ADD_MESSAGE: {
-      return addMessageToState(state, createMessage(action));
+      return addMessageToState(state, action);
     }
     case ADD_DATA:
-      return processMessagesList([...state, ...action.messages]);
+      return processMessagesList([...action.messages]);
     default:
       return state;
   }

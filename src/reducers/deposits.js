@@ -1,9 +1,9 @@
-import { TOGGLE_OPERATIONS_LIST_VISIBILITY, ADD_DATA } from '../actions';
-
-const processDeposits = ({ operations, date, ...account}) =>
-  ({ ...account, date: new Date(date) });
+import { ADD_DATA } from '../actions';
 
 const convertDepositsToObjects = (accounts) => {
+  const processDeposits = ({ operations, date, ...account}) =>
+    ({ ...account, date: new Date(date) });
+
   return accounts.map(processDeposits).reduce((acc, {id, ...account}) =>
     ({ ...acc, [id]: account }), {})
 };
@@ -13,15 +13,43 @@ const depositReducer = (state = [], action) => {
     case ADD_DATA: {
       return convertDepositsToObjects(action.deposits);
     }
-    case TOGGLE_OPERATIONS_LIST_VISIBILITY:
-      if (action.typeOfList === 'accounts') {
-        return state;
-      }
-      const id = action.id;
-      return {...state, [id]: {...state[id], is_open: !state[id].is_open}};
     default:
       return state;
   }
 };
+
+const getKeys = ( deposits ) => Object.keys(deposits);
+const getPropsForItem = (deposits , tab, id) => {
+  const { name, amount, currency, percentage, date } = deposits[id];
+  const is_open = false;
+  const lastOperation = null;
+  const title = (name === undefined) ? (tab === 'accounts') ? `Счет № ${id}` : `Вклад № ${id}` : name;
+  const propsForHeader = {
+    tab,
+    title,
+    amount,
+    currency,
+    is_open
+  };
+  const propsForFooter = {
+    percentage,
+    date,
+    lastOperation,
+    is_open
+  };
+  // { id, name, amount, currency, is_open } to Header
+  // { percentage, date, lastOperation, is_open } to Footer
+  return {
+    propsForHeader,
+    propsForFooter
+  }
+};
+
+
+export {
+  getKeys,
+  getPropsForItem
+}
+
 
 export default depositReducer;

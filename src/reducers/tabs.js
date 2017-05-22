@@ -9,5 +9,4 @@ const tabReducer = (state = 'accounts', action) => {
   }
 };
 
-
 export default tabReducer;

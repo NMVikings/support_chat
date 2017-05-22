@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getItemOperations } from '../../reducers';
+import { getActiveAccountOperations } from '../../reducers/sidebar';
 import './OperationsList.css';
 
 import Item from '../../components/Item/Item';
@@ -24,8 +24,10 @@ const OperationsList = ({ id, operations }) => {
   )
 };
 
-const mapStateToProps = (state, { id }) => {
-  return getItemOperations(state, id)
+const mapStateToProps = ({ sidebar }) => {
+  return {
+    operations: getActiveAccountOperations(sidebar)
+  }
 };
 
 

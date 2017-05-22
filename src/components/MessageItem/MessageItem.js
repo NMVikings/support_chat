@@ -1,7 +1,7 @@
 import React from 'react';
 import Operation from '../Operation/Operation';
 import './MessageItem.css';
-import { getOperation } from '../../reducers';
+import { getOperation } from '../../reducers/sidebar';
 import { connect } from 'react-redux';
 
 const MessageItem = ({  content, role, image }) => {
@@ -19,11 +19,11 @@ const MessageItem = ({  content, role, image }) => {
   )
 };
 
-const mapStateToProps = (state, { data }) => {
+const mapStateToProps = ({ sidebar }, { data }) => {
   const { content } = data;
   if (typeof(content) !== 'string') {
     return {
-      content: getOperation(state, content)
+      content: getOperation(sidebar, content)
     }
   }
   return {};
