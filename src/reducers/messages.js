@@ -1,4 +1,4 @@
-import { ADD_MESSAGE, ADD_MESSAGE_LIST } from '../actions';
+import { ADD_MESSAGE, ADD_DATA } from '../actions';
 
 const processMessagesList = (data) => {
   const processDate = (newData, item) => {
@@ -53,8 +53,8 @@ const messageReducer = (state = {}, action) => {
     case ADD_MESSAGE: {
       return addMessageToState(state, createMessage(action));
     }
-    case ADD_MESSAGE_LIST:
-      return processMessagesList([...state, ...action.messageList]);
+    case ADD_DATA:
+      return processMessagesList([...state, ...action.messages]);
     default:
       return state;
   }

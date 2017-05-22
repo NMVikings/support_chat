@@ -1,5 +1,4 @@
 const ADD_MESSAGE = 'ADD_MESSAGE';
-const ADD_MESSAGE_LIST = 'ADD_MESSAGE_LIST';
 const CHANGE_TAB = 'CHANGE_TAB';
 const TOGGLE_OPERATIONS_LIST_VISIBILITY = 'TOGGLE_OPERATIONS_LIST_VISIBILITY';
 const ADD_ITEMS_LIST = 'ADD_ITEMS_LIST';
@@ -9,11 +8,6 @@ const ADD_DATA = 'ADD_DATA';
 const addMessage = ( message ) => ({
     type: ADD_MESSAGE,
     ...message
-});
-
-const addMessageList= (messageList) => ({
-    type: ADD_MESSAGE_LIST,
-    messageList
 });
 
 const changeTab = (tab) => ({
@@ -40,7 +34,7 @@ const addOperationsToItem = (typeOfList, id, operations) => ({
     operations
 });
 
-const addData = (messages, deposits, accounts) => ({
+const addData = ({ messages, deposits, accounts }) => ({
     type: ADD_DATA,
     messages,
     deposits,
@@ -50,14 +44,13 @@ const addData = (messages, deposits, accounts) => ({
 
 export {
   addMessage,
-  addMessageList,
   changeTab,
   toggleOperationListVisibility,
   addItemsList,
   addOperationsToItem,
   addData,
   ADD_MESSAGE,
-  ADD_MESSAGE_LIST,
   CHANGE_TAB,
   TOGGLE_OPERATIONS_LIST_VISIBILITY,
+  ADD_DATA
 }

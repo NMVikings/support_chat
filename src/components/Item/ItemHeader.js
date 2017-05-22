@@ -6,7 +6,7 @@ import maximize from '../../images/maximize.svg';
 import close from '../../images/close.svg';
 
 const ItemHeader = ({ tab, id, name, amount, currency, is_open, toggleVisibility }) => {
-  const title = (name === undefined) ? `Счет № ${id}` : name;
+  const title = (name === undefined) ? (tab === 'accounts') ? `Счет № ${id}` : `Вклад № ${id}` : name;
   return (
     <header className="item__header">
       <div className="item__title">
