@@ -1,6 +1,5 @@
 import React from 'react';
-import { toggleOperationListVisibility } from '../../actions';
-import { connect } from 'react-redux';
+import CurrencySign from '../CurrencySign/CurrencySign';
 import maximize from '../../images/maximize.svg';
 import close from '../../images/close.svg';
 
@@ -19,16 +18,10 @@ const ItemHeader = ({ title, tab, amount, currency, is_open, toggleVisibility })
             ''
         }
       </div>
-      <div className="item__money">{amount} {currency}</div>
+      <div className="item__money">{amount} <CurrencySign currency={currency}/></div>
     </header>
   )
 };
 
-const mapDispatchToProps = (dispatch, { id }) => ({
-  toggleVisibility(e) {
-    e.preventDefault();
-    dispatch(toggleOperationListVisibility(id))
-  }
-});
 
-export default connect(null, mapDispatchToProps)(ItemHeader);
+export default ItemHeader;

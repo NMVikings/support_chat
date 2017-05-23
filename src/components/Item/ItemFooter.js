@@ -1,4 +1,5 @@
 import React from 'react';
+import CurrencySign from '../CurrencySign/CurrencySign';
 
 const ItemFooter = ({ percentage, date, time, lastOperation, is_open, currency }) => {
   let lastOperationSpan = '';
@@ -6,7 +7,7 @@ const ItemFooter = ({ percentage, date, time, lastOperation, is_open, currency }
     lastOperationSpan =
       (<span><br/>
       Последняя операция: {lastOperation.date} | {lastOperation.time}
-        (<span className={lastOperation.classString}>{lastOperation.sign} {lastOperation.change} {currency}</span>)
+        (<span className={lastOperation.classString}>{lastOperation.sign} {lastOperation.change} <CurrencySign currency={currency} /></span>)
     </span>);
   }
 
