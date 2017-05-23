@@ -6,10 +6,15 @@ import data from './data/data.json';
 
 const configureStore = () => {
   const defaultState = {
-    admin: {
-      role: 'Admin',
-      name: 'Maria',
-      image: 'https://graph.facebook.com/100006276431900/picture?type=normal'
+    roles: {
+      admin: {
+        role: 'Admin',
+        name: 'Мария'
+      },
+      user: {
+        role: 'User',
+        name: 'Кирилл'
+      }
     }
   };
 

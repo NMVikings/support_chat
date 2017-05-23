@@ -41,7 +41,7 @@ class MessageForm extends Component {
   };
 }
 
-const mapStateToProps = ({ admin }) => ({ admin });
+const mapStateToProps = ({ roles }) => ({ admin: roles.admin });
 
 const mergeProps = ({ admin }, { dispatch } ) => {
   function sendMessage(e) {

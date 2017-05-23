@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import messages from './messages';
 import sidebarReducer from './sidebar';
-import admin from './admin';
+import roles from './roles';
 
 export default combineReducers({
   sidebar: sidebarReducer,
   messages,
-  admin
+  roles
 });
