@@ -9,7 +9,7 @@ const SendOperationToMessageIcon = ({ sendOperation }) => {
   )
 };
 
-const mapStateToProps = ({ admin }) => ({ admin });
+const mapStateToProps = ({ roles }) => ({ admin: roles.admin });
 
 const mergeProps = ({ admin, tab }, { dispatch }, {operationId, itemId}) => ({
   sendOperation() {
