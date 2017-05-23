@@ -3,8 +3,9 @@
     width: 90px;
     border-radius: 4px;
     background-color: #52AFF1;
-    height: 33px;
+    padding: 9px 0;
     color: #FFFFFF;
+    text-align: center;
 }
 
 .btn:not(:disabled) {
@@ -13,14 +14,11 @@
 
 .btn_big {
     width: 170px;
-    height: 45px;
+    padding: calc(22px / 2);
     font-size: 20px;
+    line-height: calc(23 / 20);
 }
 
-.btn_page {
-    display: block;
-    margin: auto;
-}
 .btn_big:active, .btn_big:focus {
     outline: none;
 }

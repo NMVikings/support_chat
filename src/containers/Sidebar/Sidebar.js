@@ -8,13 +8,14 @@ import OperationsList from '../OperationsList/OperationsList'
 import './Sidebar.css'
 
 const Sidebar = ({ keys, activeId, activeTab, ...props}) => {
+  console.log(activeTab);
   return (
     <div className="sidebar">
       <TabSelector {...props} />
       {
         (activeId !== '' && activeTab === 'accounts') ?
-          <OperationsList id={activeId} /> :
-          <ItemsList keys={keys} />
+          <OperationsList id={activeId} tab={activeTab} /> :
+          <ItemsList keys={keys} tab={activeTab} />
       }
     </div>
   );

@@ -22,9 +22,6 @@ body {
 a {
     text-decoration: none;
 }
-a:visited {
-    color: inherit;
-}
 
 .page {
     min-width: 422px;

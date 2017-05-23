@@ -14,16 +14,12 @@ const OperationPage = ({ match, operation }) => {
         </div>
       </div>
       <div className="page__btn-wrapper">
-        <button className="btn btn_big">
-          <Link to="/chat">
-            Back to Chat
-          </Link>
-        </button>
-        <button className="btn btn_big">
-          <Link to={`/accounts/${match.params.itemId}`}>
-            Back to Account
-          </Link>
-        </button>
+        <Link to="/" className="btn btn_big">
+          Back to Chat
+        </Link>
+        <Link to={`/accounts/${match.params.itemId}`} className="btn btn_big">
+          Back to Account
+        </Link>
       </div>
     </div>
   )

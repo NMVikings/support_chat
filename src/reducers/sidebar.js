@@ -4,8 +4,7 @@ import tabsReducer from './tabs';
 import accountsReducer, * as accounts from './accounts';
 
 /* SELECTORS */
-const getPropsForItem = (state, id) => {
-  const tab = state.activeTab;
+const getPropsForItem = (state, tab, id) => {
   if (tab === 'accounts') {
     return accounts.getPropsForItem(state.accounts, tab, id);
   } else if (tab === 'deposits') {

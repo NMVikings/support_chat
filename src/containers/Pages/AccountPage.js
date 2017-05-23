@@ -11,15 +11,13 @@ const AccountPage = ({ match, activeTab }) => {
     <div className="page">
       {
         activeTab === id ?
-          <OperationsList id={id} /> :
-          <Item id={id} isEven={true} />
+          <OperationsList id={id} tab="accounts"/> :
+          <Item id={id} tab="accounts" isEven={true} />
       }
       <div className="page__btn-wrapper">
-        <button className="btn btn_big">
-          <Link to="/chat">
-            Back to Chat
-          </Link>
-        </button>
+        <Link to="/" className="btn btn_big">
+          Back to Chat
+        </Link>
       </div>
     </div>
   )

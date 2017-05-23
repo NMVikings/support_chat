@@ -18,8 +18,8 @@ const Item = ({ propsForLink, propsForFooter, propsForHeader, toggleVisibility, 
   );
 };
 
-const mapStateToProps = ({ sidebar }, { id }) => {
-  return getPropsForItem(sidebar, id);
+const mapStateToProps = ({ sidebar }, { id, tab }) => {
+  return getPropsForItem(sidebar, tab, id);
 };
 
 const mapDispatchToProps = (dispatch, { id }) => ({

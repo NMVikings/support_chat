@@ -1,21 +1,20 @@
 import React from 'react';
 import App from './App/App';
-import AccountPage from './pages/AccountPage';
-import DepositPage from './pages/DepositPage';
-import OperationPage from './pages/OperationPage';
+import AccountPage from './Pages/AccountPage';
+import DepositPage from './Pages/DepositPage';
+import OperationPage from './Pages/OperationPage';
 import { Provider } from 'react-redux';
-import { Router, Route } from 'react-router-dom';
-import createBrowserHistory from 'history/createBrowserHistory'
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <Router history={createBrowserHistory()}>
+    <Router>
       <div>
-        <Route path="/chat" component={App} />
-        <Route path="/accounts/:id" component={AccountPage} />
-        <Route path="/deposits/:id" component={DepositPage} />
-        <Route path="/operations/:itemId/:operationId" component={OperationPage} />
+        <Route path={process.env.PUBLIC_URL + "/accounts/:id"} component={AccountPage} />
+        <Route path={process.env.PUBLIC_URL + "/deposits/:id"} component={DepositPage} />
+        <Route path={process.env.PUBLIC_URL + "/operations/:itemId/:operationId"} component={OperationPage} />
+        <Route exact path={process.env.PUBLIC_URL + "/"} component={App} />
       </div>
     </Router>
   </Provider>
