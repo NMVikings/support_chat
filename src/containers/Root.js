@@ -4,19 +4,19 @@ import AccountPage from './Pages/AccountPage';
 import DepositPage from './Pages/DepositPage';
 import OperationPage from './Pages/OperationPage';
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {  Route, HashRouter } from 'react-router-dom';
 
 
 const Root = ({ store }) => (
   <Provider store={store}>
-    <Router>
+    <HashRouter>
       <div>
-        <Route path={process.env.PUBLIC_URL + "/accounts/:id"} component={AccountPage} />
-        <Route path={process.env.PUBLIC_URL + "/deposits/:id"} component={DepositPage} />
-        <Route path={process.env.PUBLIC_URL + "/operations/:itemId/:operationId"} component={OperationPage} />
-        <Route exact path={process.env.PUBLIC_URL + "/"} component={App} />
+        <Route path={"/accounts/:id"} component={AccountPage} />
+        <Route path={"/deposits/:id"} component={DepositPage} />
+        <Route path={"/operations/:itemId/:operationId"} component={OperationPage} />
+        <Route exact path={"/"} component={App} />
       </div>
-    </Router>
+    </HashRouter>
   </Provider>
 );
 
