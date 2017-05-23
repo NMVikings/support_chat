@@ -25,7 +25,8 @@ const ItemHeader = ({ title, tab, amount, currency, is_open, toggleVisibility })
 };
 
 const mapDispatchToProps = (dispatch, { id }) => ({
-  toggleVisibility() {
+  toggleVisibility(e) {
+    e.preventDefault();
     dispatch(toggleOperationListVisibility(id))
   }
 });

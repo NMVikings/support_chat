@@ -38,11 +38,16 @@ const getPropsForItem = (deposits , tab, id) => {
     lastOperation,
     is_open
   };
+  const propsForLink = {
+    tab,
+    id
+  };
   // { id, name, amount, currency, is_open } to Header
   // { percentage, date, lastOperation, is_open } to Footer
   return {
     propsForHeader,
-    propsForFooter
+    propsForFooter,
+    propsForLink
   }
 };
 

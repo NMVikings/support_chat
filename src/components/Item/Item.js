@@ -3,14 +3,17 @@ import ItemHeader from './ItemHeader';
 import ItemFooter from './ItemFooter';
 import { connect } from 'react-redux';
 import { getPropsForItem } from '../../reducers/sidebar';
+import { Link } from 'react-router-dom';
 import './Item.css';
 
-const Item = ({ propsForFooter, propsForHeader, isEven }) => {
+const Item = ({ propsForLink, propsForFooter, propsForHeader, isEven }) => {
   return (
-    <div className={`item ${isEven ? 'item_even' : 'item_odd'}`}>
-      <ItemHeader {...propsForHeader} />
-      <ItemFooter {...propsForFooter} />
-    </div>
+    <Link to={`/${propsForLink.tab}`} >
+      <div className={`item ${isEven ? 'item_even' : 'item_odd'}`}>
+        <ItemHeader {...propsForHeader} />
+        <ItemFooter {...propsForFooter} />
+      </div>
+    </Link>
   );
 };
 
