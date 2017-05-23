@@ -17,6 +17,10 @@
     font-size: 20px;
 }
 
+.btn_page {
+    display: block;
+    margin: auto;
+}
 .btn_big:active, .btn_big:focus {
     outline: none;
 }

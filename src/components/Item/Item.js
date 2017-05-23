@@ -9,7 +9,7 @@ import './Item.css';
 
 const Item = ({ propsForLink, propsForFooter, propsForHeader, toggleVisibility, isEven }) => {
   return (
-    <Link to={`/${propsForLink.tab}`} >
+    <Link to={`/${propsForLink.tab}/${propsForLink.id}`} >
       <div className={`item ${isEven ? 'item_even' : 'item_odd'}`}>
         <ItemHeader {...propsForHeader} toggleVisibility={toggleVisibility} />
         <ItemFooter {...propsForFooter} />

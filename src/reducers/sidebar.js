@@ -33,6 +33,9 @@ const getSidebarData = (state) => {
     activeTab: state.activeTab
   })
 };
+const getActiveAccountId = (state) => {
+  return accounts.getActiveAccountId(state.accounts);
+};
 /* SELECTORS */
 
 export default combineReducers({
@@ -46,5 +49,6 @@ export {
   getKeys,
   getActiveAccountOperations,
   getOperation,
-  getSidebarData
+  getSidebarData,
+  getActiveAccountId
 }

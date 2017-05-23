@@ -22,3 +22,22 @@ body {
 a {
     text-decoration: none;
 }
+a:visited {
+    color: inherit;
+}
+
+.page {
+    min-width: 422px;
+    background: white;
+    padding-bottom: 20px;
+}
+
+.page__content {
+    padding: 20px 0;
+}
+
+.page__btn-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

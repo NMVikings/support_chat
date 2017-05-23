@@ -374,6 +374,7 @@
           "text": "Пополнение с карты **** 0465",
           "change": 3500,
           "currency": "RUB",
+          "id": "80581912-5f4f-4afd-8029-edc5fa7ff87f",
           "moneyDirection": true
         },
         {
@@ -381,6 +382,7 @@
           "text": "Списание на карту **** 0465",
           "change": 6470,
           "currency": "RUB",
+          "id": "579e6de3-1c77-4039-a9f3-017a5b939d43",
           "moneyDirection": false
         },
         {
@@ -388,6 +390,7 @@
           "text": "Начисление процентов",
           "change": 700,
           "currency": "RUB",
+          "id": "579e6de3-1c77-4039-a9f3-017a5b939d43",
           "moneyDirection": true
         },
         {
@@ -395,6 +398,7 @@
           "text": "Пополнение с карты **** 0465",
           "change": 685,
           "currency": "RUB",
+          "id": "0c36f2e9-5794-4a44-ab7d-c6e9bbda6d2a",
           "moneyDirection": true
         },
         {
@@ -402,6 +406,7 @@
           "text": "Списание на карту **** 0465",
           "change": 7895,
           "currency": "RUB",
+          "id": "de3de54c-c27d-4a71-a9fc-99747e19489d",
           "moneyDirection": false
         }
       ]
@@ -418,6 +423,7 @@
           "text": "Пополнение с карты **** 0465",
           "change": 3500,
           "currency": "RUB",
+          "id": "5234924f-9185-44c1-a366-4bb5c3250517",
           "moneyDirection": true
         },
         {
@@ -425,6 +431,7 @@
           "text": "Списание на карту **** 0465",
           "change": 670,
           "currency": "RUB",
+          "id": "53e5efdb-ab1b-4660-ab85-80f9293b392f",
           "moneyDirection": false
         },
         {
@@ -432,6 +439,7 @@
           "text": "Начисление процентов",
           "change": 700,
           "currency": "RUB",
+          "id": "60ced812-9ce5-4cdc-8f6c-1d99d4cca465",
           "moneyDirection": true
         }
       ]
@@ -449,6 +457,7 @@
           "text": "Пополнение с карты **** 0465",
           "change": 3500,
           "currency": "RUB",
+          "id": "a3834f9c-19f1-42ef-bd08-5357f899c99b",
           "moneyDirection": true
         },
         {
@@ -456,6 +465,7 @@
           "text": "Списание на карту **** 0465",
           "change": 6000,
           "currency": "RUB",
+          "id": "3e6a6dbc-4dc4-43bb-9c57-6591c89ce142",
           "moneyDirection": false
         },
         {
@@ -463,6 +473,7 @@
           "text": "Начисление процентов",
           "change": 700,
           "currency": "RUB",
+          "id": "c80483a0-afdd-4128-953b-cb7bfa477801",
           "moneyDirection": true
         },
         {
@@ -470,6 +481,7 @@
           "text": "Пополнение с карты **** 0465",
           "change": 3200,
           "currency": "RUB",
+          "id": "61b71015-d875-41df-ac0c-49a29f9055f8",
           "moneyDirection": true
         },
         {
@@ -477,6 +489,7 @@
           "text": "Списание на карту **** 0465",
           "change": 3000,
           "currency": "RUB",
+          "id": "1c568f7c-69fb-44c8-a552-4d4199793d21",
           "moneyDirection": false
         },
         {
@@ -484,6 +497,7 @@
           "text": "Пополнение с карты **** 0465",
           "change": 4000,
           "currency": "RUB",
+          "id": "9a137750-8e9f-46ad-922f-9d533606c2e5",
           "moneyDirection": true
         },
         {
@@ -491,6 +505,7 @@
           "text": "Списание на карту **** 0465",
           "change": 7400,
           "currency": "RUB",
+          "id": "a489f135-1223-4abb-8079-88b750250959",
           "moneyDirection": false
         }
       ]

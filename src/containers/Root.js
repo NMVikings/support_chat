@@ -13,9 +13,9 @@ const Root = ({ store }) => (
     <Router history={createBrowserHistory()}>
       <div>
         <Route path="/chat" component={App} />
-        <Route path="/accounts" component={AccountPage} />
-        <Route path="/deposits" component={DepositPage} />
-        <Route path="/operation" component={OperationPage} />
+        <Route path="/accounts/:id" component={AccountPage} />
+        <Route path="/deposits/:id" component={DepositPage} />
+        <Route path="/operations/:itemId/:operationId" component={OperationPage} />
       </div>
     </Router>
   </Provider>

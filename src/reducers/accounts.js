@@ -1,5 +1,4 @@
 import { TOGGLE_OPERATIONS_LIST_VISIBILITY, ADD_DATA } from '../actions';
-import { v4 } from 'uuid';
 import { combineReducers } from 'redux';
 
 /* PROCESSING INCOMING DATE */
@@ -15,7 +14,7 @@ const processAccounts = ({ operations, date, ...account}) => ({
   ...account,
   date: new Date(date),
   operations: sortOperations(operations.map(({ date, ...operation }) =>
-    ({ ...operation, id: v4(), date: new Date(date) })
+    ({ ...operation, date: new Date(date) })
   ))
 });
 const convertAccountsToObjects = (accounts) => {
@@ -97,7 +96,12 @@ const getPropsForItem = ({ accounts, activeAccountId }, tab, id) => {
   }
 };
 const getOperation = ({ accounts }, { itemId, operationId }) => {
-  return accounts[itemId].operations.filter(operation => operation.id === operationId)[0];
+  console.log('itemId', itemId, '  operationId', operationId);
+  console.log('getOperation', accounts[itemId].operations.filter(operation => operation.id === operationId)[0]);
+  return {
+    ...accounts[itemId].operations.filter(operation => operation.id === operationId)[0],
+    itemId: itemId
+  };
 };
 /* SELECTORS */
 
