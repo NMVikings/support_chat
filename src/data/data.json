@@ -373,30 +373,35 @@
           "date": "Sun May 21 2017 12:02:03 GMT+0300 (MSK)",
           "text": "Пополнение с карты **** 0465",
           "change": 3500,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Mon May 22 2017 00:46:13 GMT+0300 (MSK)",
           "text": "Списание на карту **** 0465",
           "change": 6470,
+          "currency": "RUB",
           "moneyDirection": false
         },
         {
           "date": "Sun May 21 2017 05:51:22 GMT+0300 (MSK)",
           "text": "Начисление процентов",
           "change": 700,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Sun May 20 2017 12:02:03 GMT+0300 (MSK)",
           "text": "Пополнение с карты **** 0465",
           "change": 685,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Mon May 18 2017 00:46:13 GMT+0300 (MSK)",
           "text": "Списание на карту **** 0465",
           "change": 7895,
+          "currency": "RUB",
           "moneyDirection": false
         }
       ]
@@ -405,25 +410,28 @@
       "id": "57894456",
       "percentage": 8,
       "date": "Sun Jun 26 2016 21:47:15 GMT+0300 (MSK)",
-      "currency": "EUR",
+      "currency": "RUB",
       "amount": 3687,
       "operations": [
         {
           "date": "Sun May 21 2017 04:36:03 GMT+0300 (MSK)",
           "text": "Пополнение с карты **** 0465",
           "change": 3500,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Mon May 22 2017 08:51:46 GMT+0300 (MSK)",
           "text": "Списание на карту **** 0465",
           "change": 670,
+          "currency": "RUB",
           "moneyDirection": false
         },
         {
           "date": "Sun May 21 2017 07:29:05 GMT+0300 (MSK)",
           "text": "Начисление процентов",
           "change": 700,
+          "currency": "RUB",
           "moneyDirection": true
         }
       ]
@@ -433,49 +441,56 @@
       "name": "На HolyJS",
       "percentage": 8,
       "date": "Sun Oct 16 2016 06:00:31 GMT+0300 (MSK)",
-      "currency": "USD",
+      "currency": "RUB",
       "amount": 7898,
       "operations": [
         {
           "date": "Sat May 20 2017 09:31:43 GMT+0300 (MSK)",
           "text": "Пополнение с карты **** 0465",
           "change": 3500,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Mon May 22 2017 14:34:59 GMT+0300 (MSK)",
           "text": "Списание на карту **** 0465",
           "change": 6000,
+          "currency": "RUB",
           "moneyDirection": false
         },
         {
           "date": "Sun May 21 2017 19:40:21 GMT+0300 (MSK)",
           "text": "Начисление процентов",
           "change": 700,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Fri May 19 2017 16:03:33 GMT+0300 (MSK)",
           "text": "Пополнение с карты **** 0465",
           "change": 3200,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Sun May 21 2017 09:12:51 GMT+0300 (MSK)",
           "text": "Списание на карту **** 0465",
           "change": 3000,
+          "currency": "RUB",
           "moneyDirection": false
         },
         {
           "date": "Sat May 20 2017 03:33:53 GMT+0300 (MSK)",
           "text": "Пополнение с карты **** 0465",
           "change": 4000,
+          "currency": "RUB",
           "moneyDirection": true
         },
         {
           "date": "Mon May 22 2017 00:19:30 GMT+0300 (MSK)",
           "text": "Списание на карту **** 0465",
           "change": 7400,
+          "currency": "RUB",
           "moneyDirection": false
         }
       ]
