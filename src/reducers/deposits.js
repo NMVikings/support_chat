@@ -33,7 +33,8 @@ const getPropsForItem = (deposits , tab, id) => {
   };
   const propsForFooter = {
     percentage,
-    date,
+    date: date.toLocaleDateString(),
+    time: date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
     lastOperation,
     is_open
   };

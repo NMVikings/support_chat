@@ -72,9 +72,17 @@ const getPropsForItem = ({ accounts, activeAccountId }, tab, id) => {
   };
   const propsForFooter = {
     percentage,
-    date,
-    lastOperation,
-    is_open
+    date: date.toLocaleDateString(),
+    time: date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+    lastOperation: {
+      ...lastOperation,
+      date: lastOperation.date.toLocaleDateString(),
+      time: lastOperation.date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'}),
+      classString: `change ${lastOperation.moneyDirection ? 'change_positive' : 'change_negative'}`,
+      sign: lastOperation.moneyDirection ? '+' : '-',
+    },
+    is_open,
+    currency
   };
   // { id, tab, title, amount, currency, is_open } to Header
   // { percentage, date, lastOperation, is_open } to Footer
@@ -84,7 +92,7 @@ const getPropsForItem = ({ accounts, activeAccountId }, tab, id) => {
   }
 };
 const getOperation = ({ accounts }, { itemId, operationId }) => {
-  return accounts[itemId].operations.filter(operation => operation.id === operationId)[0]
+  return accounts[itemId].operations.filter(operation => operation.id === operationId)[0];
 };
 /* SELECTORS */
 
