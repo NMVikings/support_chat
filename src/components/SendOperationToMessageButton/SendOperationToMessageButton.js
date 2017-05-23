@@ -16,7 +16,6 @@ const mergeProps = ({ admin, tab }, { dispatch }, {operationId, itemId}) => ({
     dispatch(
       addMessage({
         ...admin,
-        date: new Date(),
         content: {itemId: itemId, operationId: operationId}
       })
     )

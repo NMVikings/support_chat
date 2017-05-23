@@ -24,7 +24,7 @@ const ChatWrapper = ({ messages, keys }) => (
     <div className="chat">
       <Scrollbars
         autoHide
-        autoHideTimeout={60000}
+        autoHideTimeout={2000}
         renderThumbVertical={props => <div {...props} className="thumb-vertical" />}
         renderTrackVertical={props => <div {...props} className="track-vertical" />}
       >

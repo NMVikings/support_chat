@@ -29,7 +29,8 @@ const mapStateToProps = ({ sidebar }, { data }) => {
   return {};
 };
 
-const mergeProps = ( { content }, dispatchProps, { data } ) => {
+const mergeProps = ({ content }, dispatchProps, { data }) => {
+  // Отображение операции в сообщениях
   if (content !== undefined) {
     return { ...data, content: (
       <div className="chat__message-content chat__message-content_with-operation">
@@ -38,13 +39,14 @@ const mergeProps = ( { content }, dispatchProps, { data } ) => {
       </div>
     )}
   }
+
+  // Отоборажение многострочных сообщений
   return {...data, content: (
     <div className="chat__message-content">
       <span className="chat__message-author">{data.name}: </span>
       {data.content.split('\n').filter(e => !!e.trim()).map((item, key) => {
         return <span key={key}>{item}<br/></span>
       })}
-
     </div>
   )};
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ItemFooter = ({ percentage, date, lastOperation, is_open }) => {
-  let lastOperationSpan = <span></span>;
+  let lastOperationSpan = '';
   if (lastOperation !== null && !is_open) {
     const classString =`change ${lastOperation.moneyDirection ? 'change_positive' : 'change_negative'}`;
     lastOperationSpan =
