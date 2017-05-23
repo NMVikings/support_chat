@@ -10,10 +10,14 @@ body {
     margin: 0;
     padding: 25px;
     font-family: Roboto, sans-serif;
-    background: #333333;
-}
-
-#root {
+    background:
+            radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent),
+            radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent) 50px 50px,
+            linear-gradient(#A8B1BB 8px, transparent 8px) 0 -4px,
+            linear-gradient(90deg, #A8B1BB 8px, transparent 8px) -4px 0;
+    background-color: slategray;
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +40,7 @@ a {
 .page {
     min-width: 422px;
     background: white;
-    padding: 20px
+    padding: 20px;
 }
 
 .page__content {
