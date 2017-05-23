@@ -20,7 +20,6 @@ const depositReducer = (state = [], action) => {
 
 const getKeys = ( deposits ) => Object.keys(deposits);
 const getPropsForItem = (deposits, tab, id) => {
-  console.log(deposits, tab, id);
   const { name, amount, currency, percentage, date } = deposits[id];
   const is_open = false;
   const lastOperation = null;

@@ -8,7 +8,6 @@ import OperationsList from '../OperationsList/OperationsList'
 import './Sidebar.css'
 
 const Sidebar = ({ keys, activeId, activeTab, ...props}) => {
-  console.log(activeTab);
   return (
     <div className="sidebar">
       <TabSelector {...props} />

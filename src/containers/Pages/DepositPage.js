@@ -4,7 +4,6 @@ import Item from '../../components/Item/Item';
 
 const DepositPage = ({ match }) => {
   const id = match.params.id;
-  console.log(id);
   return (
     <div className="page">
       <Item id={id} tab="deposits" isEven={true} />

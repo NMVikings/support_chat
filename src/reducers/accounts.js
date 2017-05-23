@@ -96,8 +96,6 @@ const getPropsForItem = ({ accounts, activeAccountId }, tab, id) => {
   }
 };
 const getOperation = ({ accounts }, { itemId, operationId }) => {
-  console.log('itemId', itemId, '  operationId', operationId);
-  console.log('getOperation', accounts[itemId].operations.filter(operation => operation.id === operationId)[0]);
   return {
     ...accounts[itemId].operations.filter(operation => operation.id === operationId)[0],
     itemId: itemId
