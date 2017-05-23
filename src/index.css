@@ -23,14 +23,24 @@ a {
     text-decoration: none;
 }
 
+.icon {
+    padding: 5px;
+    outline: 2px solid transparent;
+    transition: outline-color 0.15s ease-in;
+}
+
+.icon:hover {
+    outline-color: #888B94;
+}
+
 .page {
     min-width: 422px;
     background: white;
-    padding-bottom: 20px;
+    padding: 20px
 }
 
 .page__content {
-    padding: 20px 0;
+    margin-bottom: 20px;
 }
 
 .page__btn-wrapper {

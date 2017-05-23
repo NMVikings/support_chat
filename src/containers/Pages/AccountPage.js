@@ -9,11 +9,13 @@ const AccountPage = ({ match, activeTab }) => {
   const id = match.params.id;
   return (
     <div className="page">
-      {
-        activeTab === id ?
-          <OperationsList id={id} tab="accounts"/> :
-          <Item id={id} tab="accounts" isEven={true} />
-      }
+      <div className="page__content">
+        {
+          activeTab === id ?
+            <OperationsList id={id} tab="accounts"/> :
+            <Item id={id} tab="accounts" isEven={true} />
+        }
+      </div>
       <div className="page__btn-wrapper">
         <Link to="/" className="btn btn_big">
           Back to Chat

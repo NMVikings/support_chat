@@ -1,6 +1,6 @@
 import React from 'react';
 import Operation from '../../components/Operation/Operation';
-import SendOperationToMessageButton from '../../components/SendOperationToMessageButton/SendOperationToMessageButton'
+import SendOperationToMessageButton from './SendOperationToMessageIcon'
 import './OperationItem.css';
 
 const OperationItem = ({ id, isEven, data }) => {

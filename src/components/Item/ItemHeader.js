@@ -11,7 +11,7 @@ const ItemHeader = ({ title, tab, amount, currency, is_open, toggleVisibility })
         {
           tab === 'accounts' ?
             <img src={is_open ? close : maximize}
-                 className="item__dropdown-icon"
+                 className="icon item__dropdown-icon"
                  onClick={toggleVisibility}
                  alt="icon"
             /> :

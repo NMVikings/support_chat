@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { addMessage } from '../../actions';
+import { addMessage } from '../../actions/index';
 import  send from '../../images/mingle-share.svg';
 
-const SendOperationToMessageButton = ({ sendOperation }) => {
+const SendOperationToMessageIcon = ({ sendOperation }) => {
   return (
-    <img src={send} alt="send-icon" className="operation__message-icon" onClick={sendOperation} />
+    <img src={send} alt="send-icon" className="icon operation__message-icon" onClick={sendOperation} />
   )
 };
 
@@ -23,4 +23,4 @@ const mergeProps = ({ admin, tab }, { dispatch }, {operationId, itemId}) => ({
 });
 
 
-export default connect(mapStateToProps, null, mergeProps)(SendOperationToMessageButton);
+export default connect(mapStateToProps, null, mergeProps)(SendOperationToMessageIcon);
