@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link }  from 'react-router-dom';
-import Item from '../../components/Item/Item';
+import Item from '../Item/Item';
 
 const DepositPage = ({ match }) => {
   const id = match.params.id;

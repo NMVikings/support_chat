@@ -1,5 +1,5 @@
 import React from 'react';
-import MessageItem from '../MessageItem/MessageItem';
+import MessageItem from '../../containers/MessageItem/MessageItem';
 import './MessageListForDate.css';
 
 const MessagesListForDate = ({ messageList }) => (

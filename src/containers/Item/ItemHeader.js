@@ -1,5 +1,5 @@
 import React from 'react';
-import CurrencySign from '../CurrencySign/CurrencySign';
+import CurrencySign from '../../components/CurrencySign/CurrencySign';
 import maximize from '../../images/maximize.svg';
 import close from '../../images/close.svg';
 

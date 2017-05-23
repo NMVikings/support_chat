@@ -1,5 +1,5 @@
 import React from 'react';
-import Operation from '../Operation/Operation';
+import Operation from '../../components/Operation/Operation';
 import './MessageItem.css';
 import { getOperation } from '../../reducers/sidebar';
 import { connect } from 'react-redux';

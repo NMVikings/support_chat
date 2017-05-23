@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addMessage } from '../../actions/index';
 import MessageInput from '../../components/MessageInput/MessageInput';
-import SubmitButton from '../SubmitButton/SubmitButton';
+import Button from '../../components/Button/Button';
 import './MessageForm.css';
 
 class MessageForm extends Component {
@@ -24,12 +24,13 @@ class MessageForm extends Component {
           editMessage={this.editMessage}
           value={value}
         />
-        <SubmitButton
+        <Button
           isDisabled={value.length === 0}
-          sendMessage={sendMessageByButton}
+          onClick={sendMessageByButton}
+          classString="message-form__btn"
         >
           Отправить
-        </SubmitButton>
+        </Button>
       </form>
     );
   }

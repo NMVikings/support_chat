@@ -3,8 +3,8 @@ import { connect } from 'react-redux';
 import { getActiveAccountOperations } from '../../reducers/sidebar';
 import './OperationsList.css';
 
-import Item from '../../components/Item/Item';
-import OperationItem from '../OperationItem/OperationItem';
+import Item from '../Item/Item';
+import OperationItem from '../../components/OperationItem/OperationItem';
 
 const OperationsList = ({ id, operations, tab }) => {
   return (

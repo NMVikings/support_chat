@@ -14,3 +14,7 @@
     font-weight: 500;
     align-self: flex-start;
 }
+
+.message-form__btn {
+    align-self: flex-end;
+}

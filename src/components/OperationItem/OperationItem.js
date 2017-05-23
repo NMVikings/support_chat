@@ -1,5 +1,5 @@
 import React from 'react';
-import Operation from '../../components/Operation/Operation';
+import Operation from '../Operation/Operation';
 import SendOperationToMessageButton from './SendOperationToMessageIcon'
 import './OperationItem.css';
 

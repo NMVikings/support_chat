@@ -1,7 +1,7 @@
 import React from 'react';
 import ItemHeader from './ItemHeader';
 import ItemFooter from './ItemFooter';
-import { toggleOperationListVisibility } from '../../actions';
+import { toggleOperationListVisibility } from '../../actions/index';
 import { connect } from 'react-redux';
 import { getPropsForItem } from '../../reducers/sidebar';
 import { Link } from 'react-router-dom';

@@ -1,6 +1,6 @@
 import React from 'react';
 import ChatWindow from '../ChatWrapper/ChatWrapper';
-import Sidebar from '../Sidebar/Sidebar';
+import Sidebar from '../../containers/Sidebar/Sidebar';
 import './App.css';
 
 const App = () => (

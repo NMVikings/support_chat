@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { changeTab } from '../../actions';
 import { getSidebarData } from '../../reducers/sidebar';
 import TabSelector from '../../components/TabSelector/TabSelector';
-import ItemsList from '../ItemsList/ItemsList';
+import ItemsList from '../../components/ItemsList/ItemsList';
 import OperationsList from '../OperationsList/OperationsList'
 import './Sidebar.css'
 

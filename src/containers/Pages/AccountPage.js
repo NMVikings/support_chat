@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { getActiveAccountId } from '../../reducers/sidebar';
 import { Link }  from 'react-router-dom';
-import Item from '../../components/Item/Item';
+import Item from '../Item/Item';
 import OperationsList from '../OperationsList/OperationsList'
 
 const AccountPage = ({ match, activeTab }) => {

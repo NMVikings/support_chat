@@ -1,5 +1,5 @@
 import React from 'react';
-import CurrencySign from '../CurrencySign/CurrencySign';
+import CurrencySign from '../../components/CurrencySign/CurrencySign';
 
 const ItemFooter = ({ percentage, date, time, lastOperation, is_open, currency }) => {
   let lastOperationSpan = '';

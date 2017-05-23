@@ -1,5 +1,5 @@
 import React from 'react';
-import App from './App/App';
+import App from '../components/App/App';
 import AccountPage from './Pages/AccountPage';
 import DepositPage from './Pages/DepositPage';
 import OperationPage from './Pages/OperationPage';
