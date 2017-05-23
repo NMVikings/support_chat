@@ -11,7 +11,7 @@ const DepositPage = ({ match }) => {
       </div>
       <div className="page__btn-wrapper">
         <Link to="/" className="btn btn_big">
-          <span>Back to Chat</span>
+          <span>Назад</span>
         </Link>
       </div>
     </div>

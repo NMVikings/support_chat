@@ -18,7 +18,7 @@ const AccountPage = ({ match, activeTab }) => {
       </div>
       <div className="page__btn-wrapper">
         <Link to="/" className="btn btn_big">
-          Back to Chat
+          Назад
         </Link>
       </div>
     </div>

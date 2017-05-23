@@ -15,10 +15,10 @@ const OperationPage = ({ match, operation }) => {
       </div>
       <div className="page__btn-wrapper">
         <Link to="/" className="btn btn_big">
-          Back to Chat
+          Назад в чат
         </Link>
         <Link to={`/accounts/${match.params.itemId}`} className="btn btn_big">
-          Back to Account
+          Назад в счёт
         </Link>
       </div>
     </div>
